@@ -1,0 +1,26 @@
+{% extends "layout/default.html" %}
+
+{% block content %}
+    <h1>
+        Кабинет авторизованного пользователя
+    </h1>
+    <hr>
+    <h2>
+        Никнейм пользователя: {{request.user.username}}
+    </h2>
+    <div>
+        Здесь может содержаться персональная информация для каждого пользователя
+    <div>
+    </br>
+    {% if is_not_author %}
+        <a class="btn btn-info" href="{% url 'accounts:upgrade' %}">
+            Стать автором
+        </a>
+    {% else %}
+        <h3>
+            Вы в группе "Авторы"
+        </h3>
+    {% endif %}
+    </br>
+    </br>
+{% endblock content %}

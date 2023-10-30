@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Homework for Skillfactory. Module D. Theme D6</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 1rem;
+			line-height: 2.2rem;
+			background-color: #f4f3f5;
+			margin: 0;
+			padding: 0;
+		}
+		.logo {
+			margin: 20px 2% 20px 12%;
+            padding: 2%;
+			float: left;
+		}
+		.header {
+			text-align: right;
+			margin: 0 12% 0 2%;
+            padding: 2%;
+		}
+		h1 {
+			color: #0a3055;
+			text-align: right;
+			line-height: 2.5rem;
+			margin-top: 8px;
+		}
+		.header-2 {
+			text-align: center;
+			margin: 0 12%;
+            padding: 10px;
+		}
+		.main-content {
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin: 0 12% 20px;
+            padding: 2%;
+        }
+		h2 {
+			color: #454545;
+			text-align: center;
+			line-height: 2rem;
+			margin-top: 2%;
+			margin-bottom: 1%;
+			padding: 1%;
+		}
+		.hr-dashed {
+			margin: 1% 0;
+			padding: 0;
+			height: 8px;
+			border: none;
+			background: linear-gradient(to right, transparent 80%, #fff 80%),
+						linear-gradient(to right, #b5e916, #fff);
+			background-size: 72px 8px, 100% 8px;
+		}
+		h3 {
+			color: #646464;
+			text-align: left;
+			margin-top: 3%;
+			margin-bottom: 1%;
+			padding: 1% 0;
+		}
+		.hr-solid {
+			text-align: left;
+			margin: 1% 0;
+			padding: 0;	
+			border-top: 3px solid #00b43f;
+			width: 50%;
+		}
+		h4 {
+			color: #313131;
+			text-align: left;
+			margin-top: 1%;
+			margin-bottom: 1%;
+			padding: 1% 0;
+			font-size: 112%;
+		}
+		.content {
+			text-align: left;
+			line-height: 160%;
+		}
+		.content a, .content li {
+			text-decoration: none;
+			color: #6ac207;
+		}
+		.content a:hover {
+			text-decoration: none;
+			color: #5dab06;
+		}
+		.hr-silver {
+			text-align: center;
+			margin: 2% auto 40px;
+			padding: 0;	
+			border-top: 1px solid #ddd;
+			width: 90%;
+		}
+		.block {
+            width: 84%;
+			margin: 0 auto;
+            padding: 2%;
+        }
+		.gray-block {
+            background-color: #f5f5f5;
+            margin: 4% 8%;
+            padding: 2% 3% 3%;
+        }
+		.text {
+			color: #313131;
+			text-align: center;
+			font-size: 120%;
+			line-height: 140%;
+			margin-top: 20px;
+		}
+		.text-green {
+			color: #6ac207;
+		}
+		pre {
+			text-align: left;
+			font-size: 1.1rem;
+			line-height: 2rem;
+			background: #F8F8F8;
+			overflow: auto;
+			width: auto;
+			border: solid #D1D9D7;
+			border-width: .1em; padding: .2em .6em;
+			margin: 0; 
+			line-height: 125%;
+		}
+
+		.custom-btn {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 5px;
+			font-weight: 600;
+			background-color: #ff0000;
+			color: #ffffff;
+			border: none;
+			font-size: 100%;
+			cursor: pointer;
+		}
+		.custom-btn:hover {
+			background-color: #ff5555;
+		}
+
+		.thanks-block {
+            background-color: #ebfff0;
+            margin: 3% 8%;
+            padding: 1% 3%;
+        }
+		
+		.block-ym-payment {
+			margin: 20px auto;
+		}
+		.custom-btn-ym {
+			background-color: #8b3ffd;
+			color: #ffffff;
+		}
+		.custom-btn-ym:hover {
+			background-color: #7636D7;
+		}
+
+		.block-qiwi-payment {
+			margin: 20px auto;
+		}
+		.custom-btn-qiwi {
+			background-color: #ff8c00;
+			color: #ffffff;
+		}
+		.custom-btn-qiwi:hover {
+			background-color: #f97b04;
+		}
+		
+		.block-wm-payment {
+			margin: 20px auto;
+		}
+		.custom-btn-wm {
+			background-color: #3c8dbc;
+			color: #ffffff;
+		}
+		.custom-btn-wm:hover {
+			background-color: #367fa9;
+		}
+		
+		.block-pf-payment {
+			margin: 20px auto;
+		}
+		.custom-btn-pf {
+			background-color: #F01010;
+			color: #ffffff;
+		}
+		.custom-btn-pf:hover {
+			background-color: #db1313;
+		}
+		
+		.block-sf {
+			margin: 20px auto;
+		}
+		.custom-btn-sf {
+			background-color: #B5E916;
+			color: #1B1C17;
+		}
+		.custom-btn-sf:hover {
+			background-color: #9CC813;
+		}
+
+		.footer {
+			text-align: center;
+			margin-bottom: 40px;
+			padding: 8px 56px;
+		}
+		
+		#sticky-block, #sticky-block a {
+			position: fixed;
+			bottom: 16px;
+			right: 16px;
+			width: 40px;
+			height: 20px;
+			background-color: #B5E916;
+			font-size: 100%;
+			line-height: 100%;
+			text-decoration: none;
+			padding: 8px 4px;
+			text-align: center;
+		}
+		#sticky-block a:hover {
+			background-color: #9CC813;
+			height: 28px;
+		}
+		@media screen and (max-width: 768px) {
+			body {
+				font-size: 1.2rem;
+				text-align: left;
+			}
+			pre {
+				font-size: 1.2rem;
+			}
+			.text {
+				font-size: 100%;
+				line-height: 140%;
+			}
+			.main-content {
+				border-radius: 10px;
+				margin: 0 4%;
+				padding: 1.5%;
+			}
+			.gray-block {
+				margin: 3% 4%;
+				padding: 5%;
+			}
+		}
+	</style>	
+</head>
+<body>
+	<a name="top"></a>
+	<div class="logo">
+		<svg width="200" height="17" viewBox="0 0 938 79" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.786 29.391l18.405 2.008c19.632 2.12 29.783 9.928 29.783 23.09 0 15.282-14.055 23.87-39.71 23.87C12.94 78.36 0 69.772 0 52.37h17.959c0 7.586 7.808 11.824 21.751 11.824 14.055 0 20.301-2.566 20.301-9.146 0-4.908-4.462-7.028-12.493-7.92L29.894 45.23C11.489 43.223 2.231 35.749 2.231 22.92 2.231 9.202 17.067.279 38.149.279c23.313 0 37.144 8.924 37.144 23.647H57.78c-.78-6.47-7.138-9.815-19.297-9.815-12.158 0-17.735 2.9-17.735 8.254 0 4.684 3.569 6.358 10.038 7.027zm520.806 33.575c-15.058 0-23.871-8.7-23.871-23.647s8.813-23.648 23.871-23.648c11.712 0 18.628 4.573 21.082 13.609h19.186C589.963 11.99 573.566.278 551.592.278c-26.214 0-43.279 15.393-43.279 39.04 0 23.76 16.954 39.042 43.279 39.042 22.866 0 38.818-12.159 40.491-30.787h-19.186c-1.115 9.705-8.923 15.393-21.305 15.393zm-104.956-16.62l13.712-35.917h.558l13.651 35.917h-27.921zm-.566-44.172l-28.333 74.29h17.402l6.174-16.175h38.543l6.147 16.174H505.3L476.856 2.174H446.07zm-278.083 0h-19.632l-28.89 29.337h-8.7V2.174H93.14v74.29h17.625V45.565h8.7l28.555 30.897h22.868L134.031 36.68l33.956-34.506zm49.749 0h17.625v60.012h40.156v14.277h-57.781V2.174zm87.229 0h-17.624v74.29h57.78V62.185h-40.156V2.174zm69.604 14.278h44.395V2.174h-62.019v74.29h17.624v-27.33h36.81V34.858h-36.81V16.452zM198.774 76.463H181.15V2.174h17.624v74.29zM699.836 2.174h44.968v17.067h-44.968V2.174zm0 17.067v40.156h-18.629V19.24h18.629zm44.968 0h18.628v40.156h-18.628V19.24zm76.52 18.962h-23.983V16.452h23.983c8.254 0 13.385 4.239 13.385 10.931 0 6.693-5.131 10.82-13.385 10.82zm31.679-10.82c0-15.504-12.048-25.209-31.679-25.209h-41.718v74.29h17.735V52.48h17.397l19.971 23.982h21.528l-22.749-27.32c12.323-2.963 19.515-10.729 19.515-21.76zm66.146-25.209l-21.082 33.017-21.082-33.017h-20.524l31.902 48.857v25.432h17.624V51.031L938 2.174h-18.851zM625.881 16.452h-27.886V2.174h73.508v14.278h-27.998v60.011h-17.624V16.452zm118.923 60.011h-44.968V59.397h44.968v17.066z" fill="#000"></path></svg>
+	</div>
+	<div class="header">
+		<h1>Python Web Developer Course</h1>
+	</div>
+	<div class="header-2">
+		<p class="text-green">Module D - 'Backend-development in Python and Django'</p>
+	</div>
+	<div class="main-content">
+		<div class="text">
+
+			<h2>Theme D6 - 'Working with Mail and Completing Scheduled Tasks in Django'</h2>
+			<hr class="hr-dashed">
+			<p>Completed homework for <b>Skillfactory Course</b>.</p>
+			
+			<div class="block">
+			<h3>Итоговое задание по теме 6 - 'Работа с почтой и выполнение задач по расписанию': проект NewsPaper</h3>
+			<hr class="hr-solid">
+			</div>
+			
+			<div id="s2" class="gray-block">
+			<h4>Усовершенствовать новостной портал NewsPaper:</h4>
+				<p style="text-align: justify;">По итогу работы в модуле необходимо реализовать дополнительный функционал:</p>
+				<p style="text-align: justify;">1) В категории должна быть возможность пользователей подписываться на рассылку новых статей в этой категории.<br />Для добавления пользователю возможности подписываться на рассылку новостей в какой-либо категории:<br />1.1) Добавить поле subscribers (соотношение manytomany), в которое будут записываться пользователи, подписанные на обновления в данной категории.<br />1.2) На самом сайте должна быть возможность пользователю подписаться на категорию (добавить маленькую кнопку "Подписаться&raquo;, когда пользователь находится на странице новостей в какой-то категории).<br />1.3) При создании новости в этой категории подписчикам этой категории на адреса их почтовых ящиков, указанные при регистрации, автоматически отправляется/ приходит сообщение о пополнении в разделе. <br />Письмо с HTML-кодом заголовка и первыми 50 символами текста статьи.<br />В теме письма должен быть сам заголовок статьи. <br />1.4) Текст состоит из вышеуказанного HTML и текста: "Здравствуй, username. Новая статья в твоём любимом разделе!".<br />Содержание письма остаётся на ваше усмотрение, главное, чтобы в нём была отражена краткая информация о данной новости.<br />В письме обязательно должна быть гиперссылка на саму статью, чтобы получатель мог по клику перейти и прочитать её.</p>
+				<p style="text-align: justify;">2) Добавить приветственное письмо, которое отправляется пользователю при регистрации в приложении. Содержание и посыл письма остается на выбор, главное &mdash; обязательно добавить ссылку на активацию и указать в нём имя пользователя!</p>
+				<p style="text-align: justify;">3) Если пользователь подписан на какую-либо категорию, то каждую неделю ему приходит на почту список новых статей, появившийся за неделю, с гиперссылками на статьи, чтобы пользователь мог перейти и прочесть любую из статей.</p>
+				<p style="text-align: justify;">4) Установить лимит на публикации - один пользователь не может публиковать более трёх новостей в сутки.</p>
+				<p style="text-align: justify;">5) Периодические задачи: добавить рассылку писем еженедельно с новыми статьями, добавленными за неделю в разделе, на который подписан пользователь.</p>
+			</div>
+			
+			<div id="s6" class="thanks-block" style="text-align: justify;"><p>Если представленная работа Вам<br />
+			<ul>
+			<li style="text-align: justify;">понравилась,</li>
+			<li style="text-align: justify;">принесла пользу,</li>
+			<li style="text-align: justify;">сэкономила время,</li>
+			</ul>
+			то Вы можете поддержать автора, воспользовавшись различными платежными системами.</p></div>
+			
+			<div class="block-ym-payment">
+				<a href="https://yoomoney.ru/to/4100117804016773" class="custom-btn custom-btn-ym" target="_blank">Поддержать автора через ЮMoney</a>
+			</div>
+			<div class="block-qiwi-payment">
+				<a href="https://qiwi.com/n/VICTORINCA" class="custom-btn custom-btn-qiwi" target="_blank">Выразить признательность через Qiwi</a>
+			</div>
+			<div class="block-wm-payment">
+				<a href="https://donate.webmoney.com/w/7MSQEs4xcygHPpeLcLATP" class="custom-btn custom-btn-wm" target="_blank">Поблагодарить автора через WebMoney</a>
+			</div>
+			<div class="block-pf-payment">
+				<form action="https://perfectmoney.com/api/step1.asp" method="POST">
+					<input type="hidden" name="PAYEE_ACCOUNT" value="U35741354">
+					<input type="hidden" name="PAYEE_NAME" value="Victorinca">
+					<input type="hidden" name="PAYMENT_ID" value="github.com-Donate-for-Victorinca-sf-d6">
+					<label for="myInput">Enter any amount:</label>
+					<input type="text" name="PAYMENT_AMOUNT" value="1" style="text-align: center; font-size: 100%; max-width: 56px; min-height: 36px; margin: 4px 8px; border: 2px red solid; border-radius: 5px;">USD
+					<input type="hidden" name="PAYMENT_UNITS" value="USD">
+					<input type="hidden" name="STATUS_URL" value="mailto:victoriavladimirskaya@gmail.com">
+					<input type="hidden" name="PAYMENT_URL" value="https://github.com/Victorinca/Skillfactory-Module-D-Theme-D6">
+					<input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">
+					<input type="hidden" name="NOPAYMENT_URL" value="https://victorinca.github.io/Skillfactory-Module-D-Theme-D6/">
+					<input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">
+					<input type="hidden" name="SUGGESTED_MEMO" value="">
+					<input type="hidden" name="BAGGAGE_FIELDS" value="">
+					<input class="custom-btn custom-btn-pf" type="submit" name="PAYMENT_METHOD" value="Donate via Perfect Money">
+				</form>
+			</div>
+			<div class="thanks-block" style="text-align: justify;">
+				<p style="text-align: center;"><strong>Благодарю Вас за щедрость!</strong></p>
+				<p style="text-align: center;"><strong>Ваша поддержка и признательность очень приятны и важны!</strong></p>
+			</div>
+			<div id="s7" class="gray-block">
+				<p style="text-align: justify;"><strong>Созданное приложение вместе с файлом с командами необходимо загрузить в&nbsp;<em>git-</em>репозиторий.</strong></p>
+			</div>
+			<div class="block-sf">
+				<a href="https://github.com/Victorinca/Skillfactory-Module-D-Theme-D6" class="custom-btn custom-btn-sf" target="_blank">Посмотреть файлы приложения</a>
+			</div>
+			
+		</div>
+	</div>
+	<div id="sticky-block">
+		<a href="#top">/\</a>
+	</div>
+	<div class="footer">
+		<p>Автор вёрстки и разработки, а также исполнитель задания: © Владимирская Виктория, СПб, 2023.</p>
+	</div>
+</body>
+</html>
